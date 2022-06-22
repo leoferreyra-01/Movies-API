@@ -1,0 +1,68 @@
+.form-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.form-cont {
+    font-size: 1.3rem;
+    margin-left: 20px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.form-cont:hover {
+    cursor: pointer;
+    font-style: italic;
+}
+
+.input{
+    color: white;
+    display: flex;
+    justify-content:  center;
+    background-color: transparent;
+    border: solid rgb(255, 255, 255) 2px;
+    border-radius: 5px;
+}
+.input:hover{
+    cursor:text;
+    box-shadow: 1px 1px 1px 1px rgba(0, 37, 158, 0.781);
+}
+
+.btnS{
+    background-color: transparent;
+    color: white;
+    border: solid rgb(255, 255, 255) 2px;
+    border-radius: 5px;
+}
+
+.btnS:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px rgba(0, 37, 158, 0.781);
+    background-color: rgba(0, 37, 158, 0.781);
+}
+
+.card{
+    background-color: rgba(255, 255, 255, 0.185);
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 40rem;
+    border-radius: 5px;
+    padding: 0.3rem;
+}
+
+.busqueda{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.content{
+    text-decoration: none;
+    color: white;
+}
+
+.content:hover{
+    font-style: italic;
+}
