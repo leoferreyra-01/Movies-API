@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import { addMovieFavorite, getMovies } from "../../actions";
+import { addMovieFavorite, getMovies } from "../../redux/actions";
 import './Buscador.css';
 
 
@@ -17,6 +17,9 @@ export class Buscador extends Component {
     this.setState({ title: event.target.value });
   }
   handleSubmit(event) {
+    if(!event.target.value){
+      alert('Please, enter a movie title');
+    }
     event.preventDefault();
     this.props.getMovies(this.state.title);
   }
@@ -25,7 +28,7 @@ export class Buscador extends Component {
     const { title } = this.state;
     return (
       <div className="card">
-        <h2 className="busqueda">BUSQUEDA</h2>
+        <h2 className="busqueda">SEARCH ANY MOVIE</h2>
         <form className='form-container' onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <input
@@ -37,7 +40,7 @@ export class Buscador extends Component {
               onChange={(e) => this.handleChange(e)}
             />
           </div>
-          <button className="btnS" type="submit">BUSCAR</button>
+          <button className="btnS" type="submit">Search</button>
         </form>
         <ul>
           {

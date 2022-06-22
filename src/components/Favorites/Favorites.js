@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import './Favorites.css';
-import { removeMovieFavorite } from "../../actions";
+import { removeMovieFavorite } from "../../redux/actions";
 
 export class ConnectedList extends Component {
 
   render() {
     return (
       <div className="card">
-        <h2 className="title">Películas Favoritas</h2>
+        <h2 className="title">Favorites Movies</h2>
         <ul >
           {
             this.props.movies && this.props.movies.map( movie => (
